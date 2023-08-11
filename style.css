@@ -81,6 +81,7 @@ main{
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid green;
+    background-color: green;
 }
 #cordotituloprince{
     text-align:center;
