@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastre-se</title>
+    <link rel="shortcut icon" href="./Imagens/tacosmexico.ico" type="image/xicon" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        function efeitos() {
+
+            const end = Date.now() + 15 * 1000;
+            const colors = ["#008000", "#FF0000"];
+
+            (function frame() {
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors,
+                });
+
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors,
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <div id="cabecalogo">
+                <a href="index.html">
+                    <img src="imagens/tacos_logo.png" width="100%" height="100%">
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <nav id="navegacao">
+
+            <a id="estilohome" href="menu.html">MENU</a>
+            <a id="estilohome" href="cardapio.html">CARDÁPIO</a>
+            <a id="estilohome" href="seupedido.html">DELIVERY</a>
+            <a id="estilohome" href="atendimento.html">ATENDIMENTO</a>
+            <a id="estilohome" href="seupedido.html">SEU PEDIDO</a>
+
+        </nav>
+
+
+        <section id="sessao">
+            <a id="estilo_cadastro_login" href="cadastro.html"> CADASTRE-SE </a>
+            <a id="estilo_cadastro_login" href="login.html"> LOGIN </a>
+        </section>
+    </header>
+
+    <main id="main_cadastro">
+        <form action="cadastro.php">
+            <fieldset id="bordinha">
+                <legend id="legend_border"><strong>INFORME SEUS DADOS</strong></legend><br>
+                <h4 ID="legend_text">CADASTRE-SE E GANHE CUPONS DE DESCONTO</h4>
+                <div id="form_um">
+                    <div id="form_cadastro_dois">
+                        <div id="acertandotipos">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Nome"><br>
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="E-mail"><br>
+                            <label for="number"></label>
+                            <input type="number" id="number" name="number" maxlength="11" minlength="11"
+                                placeholder="(ddd)Número do celular"><br>
+                            <label for="senha"></label>
+                            <input type="password" id="senha" name="senha" minlength="4"
+                                placeholder="Digite sua senha"><br>
+                            <label for="senhadois"></label>
+                            <input type="password" id="senha" name="senha" minlength="4"
+                                placeholder="Repita sua senha"><br>
+                        </div>
+                        <div id="form_cadastro">
+                            <div class="modificando_texto">
+                                <label for="data"><strong>SEU NASCIMENTO:</strong></label><br>
+                                <input type="date" id="data" name="data"><br><br>
+                                <label for="estado"><strong>ESTADO:</strong></label><br>
+                                <select name="estado" id="estado">
+                                    <option value="espírito_santo">ES</option>
+                                    <option value="sao_paulo">SP</option>
+                                    <option value="rio_de_janeiro">RJ</option>
+                                    <option value="minas_gerais">MG</option>
+                                </select><br><br>
+                                <label for="sexo"><strong>SEU GÊNERO:</strong></label>
+                            </div>
+                            <div id="genero">
+
+                                <input type="radio" id="sexomasculino" name="sexo"><br>
+                                <label for="sexomasculino">MASCULINO</label><br>
+                                <input type="radio" id="sexofeminino" name="sexo"><br>
+                                <label for="sexofeminino">FEMININO</label><br>
+                                <input type="radio" id="sexonao" name="sexo"><br>
+                                <label for="sexonao">NÃO INFORMAR</label>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="enviaelimpa">
+                        <input type="submit" value="ENVIAR" >
+                        <input type="reset" value="LIMPAR TUDO" onclick= "efeitos()">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <h5 id="texto_cadastro">PAGUE MENOS E COMA MAIS!</h5>
+    </main>
+
+    <footer>
+        <div id="concerto">
+            <div id="estilope">
+                <h2> >>DESDE JÁ AGRADECEMOS A PREFERÊNCIA<< </h2>
+            </div>
+        </div>
+        <div>
+            <p id="texto">Para mais informações sobre nosso trabalho clique em um dos botões abaixo ou acesse nossas
+                redes sociais.</p>
+        </div>
+        <section id="centralizar">
+            <nav id="alinhamento">
+                <a href="menu.html" target="_blank" rel="noopener noreferrer" id="linkspe"> Quem Somos?</a>
+                <a href="politica.html" target="_blank" rel="noopener noreferrer" id="linkspe">Política de
+                    Privacidade</a>
+                <a href="atendimento.html" target="_blank" rel="noopener noreferrer" id="linkspe">Central de
+                    Atendimento</a>
+            </nav>
+
+            <div id="central">
+                <div id="instagram">
+                    <div id="imagens">
+                        <img src="imagens/instagram2.png" width="100%" height="100%">
+                    </div>
+                    <a href="www.instagram.com">Instagram</a>
+                </div>
+
+                <div id="whatsapp">
+                    <div id="imagens">
+                        <img src="imagens/whatsapp2.png" width="100%" height="100%">
+                    </div>
+                    <a href="www.whatsapp.com">Whatsapp</a>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+
+
+</body>
+
+</html>
